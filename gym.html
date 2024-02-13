@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My favourite place, the gym 🏋🏾‍♀️</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #bb9cc0;
+        text-transform: uppercase;
+        font-size: 50px;
+        margin: 25px auto;
+        line-height: 200%;
+      }
+      h2 {
+        text-align: center;
+        border: 2px solid #bb9cc0;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+        max-width: 50%;
+      }
+      p {
+        padding: 25px;
+        line-height: 1.5;
+        font-size: 15px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        font-size: 20px;
+        background: #bb9cc0;
+        color: #ffffff;
+        padding: 15px 35px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+        transition: all 20ms ease-in-out;
+      }
+
+      button:hover {
+        background: #67729d;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      .learn-more {
+        text-decoration: none;
+        color: #67729d;
+        font-size: 14px;
+        text-align: center;
+        display: block;
+        padding: 10px;
+        font-weight: bolder;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .content {
+        max-width: 600px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        background: linear-gradient(#fed9ed, #e7bcde);
+      }
+
+      .enhance {
+        color: #67729d;
+        font-size: 20px;
+      }
+
+      .footer {
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .image-container {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        padding: 10px;
+        border-radius: 4px;
+        background: (#fed9ed);
+      }
+
+      .image-container img {
+        display: block;
+        width: 100%;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>I love the gym</h1>
+      <h2>Especially weight training.</h2>
+      <div class="image-container">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/345/original/woman_weight_lifting.jpeg?1701276781"
+          alt="Woman weight lifting"
+        />
+      </div>
+      <hr />
+      <p>
+        <em>Weight training</em> can help you manage or lose weight, and it can
+        increase your metabolism to help you burn more calories.
+        <br />
+        <br />
+        <span class="enhance">
+          <strong> Enhance your quality of life.</strong>
+        </span>
+        <br />
+        <br />
+        Strength training may enhance your quality of life and improve your
+        ability to do everyday activities. Strength training can also protect
+        your joints from injury.
+      </p>
+      <hr />
+      <a
+        href="https://www.healthline.com/health/fitness-exercise-weight-training"
+        target="_blank"
+        class="learn-more"
+      >
+        Learn more via Healthline
+      </a>
+      <button class="buy-button">💰 Buy weights</button>
+      <p>This page was built by <strong>Jada Baron</strong></p>
+    </div>
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let exercise = prompt(
+          "Is weight lifting your favorite form of exercise?"
+        );
+        exercise = exercise.toLowerCase();
+        if (exercise === "yes") {
+          alert(
+            "Great minds think alike! Thank you for sharing " +
+              name +
+              " and we will be in touch by email, meanwhile stay fit and healthy! 💪"
+          );
+        } else {
+          alert(
+            "It should be! But thank you still for sharing " +
+              name +
+              " and we will be in touch by email, meanwhile stay fit and healthy! 💪"
+          );
+        }
+      }
+
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
